@@ -28,7 +28,7 @@ pip install youtube-dl --user
 
 ## Usage
 
-First, make `link.csv` file in this directory.
+First, make `link.csv` file in this directory or just use sample link.csv.
 
 ```sh
 touch link.csv
