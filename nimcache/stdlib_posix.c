@@ -8,6 +8,7 @@
 #define NIM_INTBITS 64
 
 #include "nimbase.h"
+#include <sys/types.h>
 #undef LANGUAGE_C
 #undef MIPSEB
 #undef MIPSEL
@@ -20,9 +21,64 @@
 #undef near
 #undef powerpc
 #undef unix
+typedef struct TNimType TNimType;
+typedef struct TNimNode TNimNode;
+typedef NU8 tyEnum_TNimKind_jIBKr1ejBgsfM33Kxw4j7A;
+typedef NU8 tySet_tyEnum_TNimTypeFlag_v8QUszD1sWlSIWZz7mC4bQ;
+typedef N_NIMCALL_PTR(void, tyProc_ojoeKfW4VYIm36I9cpDTQIg) (void* p, NI op);
+typedef N_NIMCALL_PTR(void*, tyProc_WSm2xU5ARYv9aAR4l0z9c9auQ) (void* p);
+struct TNimType {
+NI size;
+tyEnum_TNimKind_jIBKr1ejBgsfM33Kxw4j7A kind;
+tySet_tyEnum_TNimTypeFlag_v8QUszD1sWlSIWZz7mC4bQ flags;
+TNimType* base;
+TNimNode* node;
+void* finalizer;
+tyProc_ojoeKfW4VYIm36I9cpDTQIg marker;
+tyProc_WSm2xU5ARYv9aAR4l0z9c9auQ deepcopy;
+};
+typedef NU8 tyEnum_TNimNodeKind_unfNsxrcATrufDZmpBq4HQ;
+struct TNimNode {
+tyEnum_TNimNodeKind_unfNsxrcATrufDZmpBq4HQ kind;
+NI offset;
+TNimType* typ;
+NCSTRING name;
+NI len;
+TNimNode** sons;
+};
+N_LIB_PRIVATE N_NIMCALL(int, WTERMSIG_9cr9a9bc3d9byCALaQhU9aObNDw)(int s);
+TNimType NTI_r9bTMVI8f19ah9b11jMgY4kPg_;
+
+N_LIB_PRIVATE N_NIMCALL(int, WTERMSIG_9cr9a9bc3d9byCALaQhU9aObNDw)(int s) {
+	int result;
+	result = (int)0;
+	result = (NI32)(s & ((NI32) 127));
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, WIFEXITED_jey9c9a5UxiJK7PlQ0lLtE0Q)(int s) {
+	NIM_BOOL result;
+	int T1_;
+	result = (NIM_BOOL)0;
+	T1_ = (int)0;
+	T1_ = WTERMSIG_9cr9a9bc3d9byCALaQhU9aObNDw(s);
+	result = (T1_ == ((NI32) 0));
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, WIFSIGNALED_jey9c9a5UxiJK7PlQ0lLtE0Q_2)(int s) {
+	NIM_BOOL result;
+	result = (NIM_BOOL)0;
+	result = (((NI8) 0) < (NI8)((NU8)(((NI8) ((NI32)((NI32)(s & ((NI32) 127)) + ((NI32) 1))))) >> (NU64)(((NI) 1))));
+	return result;
+}
 NIM_EXTERNC N_NOINLINE(void, stdlib_posixInit000)(void) {
 }
 
 NIM_EXTERNC N_NOINLINE(void, stdlib_posixDatInit000)(void) {
+NTI_r9bTMVI8f19ah9b11jMgY4kPg_.size = sizeof(pid_t);
+NTI_r9bTMVI8f19ah9b11jMgY4kPg_.kind = 34;
+NTI_r9bTMVI8f19ah9b11jMgY4kPg_.base = 0;
+NTI_r9bTMVI8f19ah9b11jMgY4kPg_.flags = 3;
 }
 

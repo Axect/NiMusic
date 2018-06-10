@@ -1,6 +1,6 @@
 import os, osproc, strutils, strformat, sequtils
 
-let callYoutube="youtube-dl --embed-thumbnail --format mp4"
+let callYoutube: string ="youtube-dl --embed-thumbnail --format mp4 "
 
 
 #var nim = &"./Nim/bin/p00{num}"
@@ -11,11 +11,15 @@ let callYoutube="youtube-dl --embed-thumbnail --format mp4"
 #else: nim = &"./Nim/bin/p{num}"
 
 proc main =
-  let x = open("test.csv")
-  var vid: seq[string] = @[]
-  for i in x.lines:
-    vid.add(multiReplace(i,[("(", "\\("),(")", "\\)"), (" ", "")]))
-  echo vid
+  let x = open("link.csv")
+  var vids: seq[string] = @[]
+  for link in x.lines:
+    let output = execProcess(callYoutube & link.string)
+    echo(&"Downloading {link}...")
+    echo output
+    vids.add(multiReplace(link,[("(", "\\("),(")", "\\)"), (" ", "")]))
+  for vid in vids:
+    let output2 = 
 
 
 #proc main =
