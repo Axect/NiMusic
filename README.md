@@ -28,6 +28,14 @@ pip install youtube-dl --user
 
 ## Usage
 
+Clone this repo.
+
+```sh
+git clone https://github.com/Axect/NiMusic
+
+cd NiMusic
+```
+
 First, make `link.csv` file in this directory or just use sample link.csv.
 
 ```sh
