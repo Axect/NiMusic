@@ -20,6 +20,15 @@ sudo apt-get install ffmpeg
 
 * Visit next site : [Rpm Fusion Free](https://rpmfusion.org/)
 * Download `rpmfusion-free-release` and install it.
+* Install ffmpeg
+```sh
+# Fedora
+sudo dnf install ffmpeg ffmpeg-devel
+
+# CentOS
+sudo yum install ffmpeg ffmpeg-devel
+```
+
 * Install youtube-dl
 
 ```sh
