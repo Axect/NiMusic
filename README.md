@@ -12,8 +12,13 @@ You can download prerequistes easily.
 ### Ubuntu
 
 ```sh
-pip install youtube-dl --user
 sudo apt-get install ffmpeg
+
+# Root Privilege
+sudo pip install youtube-dl
+
+# Non Root User (export PATH=$PATH:$HOME/.local/bin) in your .bashrc
+pip install youtube-dl --user
 ```
 
 ### Fedora, CentOS, RHEL
@@ -32,10 +37,17 @@ sudo yum install ffmpeg ffmpeg-devel
 * Install youtube-dl
 
 ```sh
+# Root Privilege
+sudo pip install youtube-dl
+
+# Non Root user -- Be sure to (export PATH=$PATH:$HOME/.local/bin) in your .bashrc (or .zshrc)
 pip install youtube-dl --user
 ```
 
 ## Usage
+
+* Warning: Don't copy your playlist link! It causes an error!
+  * Thus, re-search music and copy that link
 
 Clone this repo.
 
